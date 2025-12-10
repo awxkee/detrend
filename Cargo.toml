@@ -1,0 +1,18 @@
+[package]
+name = "detrend"
+version = "0.1.0"
+edition = "2024"
+description = "Signal detrending"
+readme = "README.md"
+keywords = ["dsp", "detrend", "detrending"]
+license = "BSD-3-Clause OR Apache-2.0"
+authors = ["Radzivon Bartoshyk"]
+documentation = "https://github.com/awxkee/detrend"
+categories = ["algorithms", "science"]
+homepage = "https://github.com/awxkee/detrend"
+repository = "https://github.com/awxkee/detrend"
+exclude = ["*.jpg", "/assets", "*.png", "*.sh", "/assets/*"]
+rust-version = "1.89.0"
+
+[dependencies]
+num-traits = "0.2.19"
