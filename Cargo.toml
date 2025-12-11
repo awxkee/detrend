@@ -1,6 +1,6 @@
 [package]
 name = "detrend"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "Signal detrending"
 readme = "README.md"

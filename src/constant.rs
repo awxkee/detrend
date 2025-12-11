@@ -26,6 +26,7 @@
  * // OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+use crate::detrend_error::try_vec;
 use crate::{DetrendError, DetrendSample};
 use num_traits::AsPrimitive;
 
@@ -43,7 +44,7 @@ where
         mean_x += q;
     }
     mean_x /= signal.len().as_();
-    let mut result = vec![T::zero(); signal.len()];
+    let mut result = try_vec![T::zero(); signal.len()];
     for (dst, &src) in result.iter_mut().zip(signal.iter()) {
         *dst = src - mean_x;
     }
